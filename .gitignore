@@ -8,3 +8,4 @@ bower_components/*
 .docs
 .env
 app/public/assets/*
+INFO.md
