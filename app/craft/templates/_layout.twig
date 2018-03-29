@@ -12,6 +12,8 @@
 <html class="no-js" lang="en">
 <head>
   <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
   <link rel="home" href="{{ siteUrl }}" />
@@ -25,12 +27,23 @@
   {% block headScripts %}
     <script src="/scripts/modernizr.js"></script>
   {% endblock %}
-
-  {{ helpers.getStyleTag('styles/main.css') }}
+  <link rel="stylesheet" href="/styles/main.css" />
 </head>
 
 <body>
-  {% include '_partials/molecules/nav' %}
+
+  <header id="main-header">
+    <div class="panel">
+      <h1 class="name">Clark Nelson</h1>
+      <nav class="site-tabs">
+        <ul class="site-pages">
+          <li>
+            Projects
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
   {% block content %}{% endblock %}
 

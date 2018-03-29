@@ -1,5 +1,5 @@
 // Typography
-$ff-primary: sans-serif;
+$ff-primary: "Isotope A", "Isotope B", sans-serif;
 
 // Colors
 $black: #000;
@@ -9,3 +9,5 @@ $body-text: $black;
 // Layout
 $sp-l: rem(60);
 $sp-s: rem(30);
+
+$em-base: 16;

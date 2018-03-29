@@ -1,5 +1,3 @@
-$em-base: 16;
-
 // Convert pixels to rems
 // eg. for a relational value of 12px write rem(12)
 // Assumes $em-base is the font-size of <html>
@@ -14,4 +12,10 @@ $em-base: 16;
 
 @function em($pxval, $base: $em-base) {
   @return ($pxval / $base) * 1em;
+}
+
+@mixin flow($ratio: 1.25) {
+  > * + * {
+    margin-top: $ratio * 1em;
+  }
 }
