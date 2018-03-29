@@ -1,0 +1,16 @@
+{#
+ # News index template
+ # -------------------
+ #}
+
+{% extends "_layout" %}
+
+{% block content %}
+  <ul>
+    {% for entry in craft.entries.section('news') %}
+      <li>
+        <a href="{{ entry.url }}"><h2>{{ entry.title }}</h2></a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
